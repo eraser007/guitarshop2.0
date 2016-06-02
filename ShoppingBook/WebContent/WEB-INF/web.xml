@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+		
+	<filter>
+		<filter-name>WordsFilter</filter-name>
+		<filter-class>com.lovo.cq.shoppingbook.filter.WordsFilter</filter-class>
+		<init-param>
+			<param-name>filePath</param-name>
+			<param-value>/WEB-INF/word.txt</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>WordsFilter</filter-name>
+		<url-pattern>/checkLogin_Note</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>codeFilter</filter-name>
+		<filter-class>com.lovo.cq.shoppingbook.filter.ShoppingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>codeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	
+	
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.PageServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userManager</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.UserManager</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowBooks</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowBooks</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowBookByIdServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowBookByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyBooksServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.BuyBooksServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteItemServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.DeleteItemServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateBookCount</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.UpdateBookCount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckLogin</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.CheckLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAllBooksByType</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowAllBooksByType</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageSearchServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.PageSearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowNoteServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageNoteServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.PageNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddNoteServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.AddNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckLogin_Note</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.CheckLogin_Note</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckNameExist</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.CheckNameExist</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RandomCodeServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.RandomCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckRandomCode</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.CheckRandomCode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowSuperTypeServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowSuperTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowSubTypeServlet</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.ShowSubTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindUser</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.FindUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAnswer</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.FindAnswer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdataPwd</servlet-name>
+    <servlet-class>com.lovo.cq.shoppingbook.servlet.UpdataPwd</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/page</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userManager</servlet-name>
+    <url-pattern>/userManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowBooks</servlet-name>
+    <url-pattern>/showBooks</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowBookByIdServlet</servlet-name>
+    <url-pattern>/showBookByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyBooksServlet</servlet-name>
+    <url-pattern>/buyBooksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteItemServlet</servlet-name>
+    <url-pattern>/deleteItemServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookCount</servlet-name>
+    <url-pattern>/updateBookCount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckLogin</servlet-name>
+    <url-pattern>/checkLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/addOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllBooksByType</servlet-name>
+    <url-pattern>/showAllBooksByType</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/searchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageSearchServlet</servlet-name>
+    <url-pattern>/pageSearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowNoteServlet</servlet-name>
+    <url-pattern>/showNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageNoteServlet</servlet-name>
+    <url-pattern>/pageNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddNoteServlet</servlet-name>
+    <url-pattern>/addNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckLogin_Note</servlet-name>
+    <url-pattern>/checkLogin_Note</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckNameExist</servlet-name>
+    <url-pattern>/checkNameExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RandomCodeServlet</servlet-name>
+    <url-pattern>/code</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckRandomCode</servlet-name>
+    <url-pattern>/checkRandomCode</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ShowSuperTypeServlet</servlet-name>
+    <url-pattern>/showSuperTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowSubTypeServlet</servlet-name>
+    <url-pattern>/showSubTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindUser</servlet-name>
+    <url-pattern>/findUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAnswer</servlet-name>
+    <url-pattern>/findAnswer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdataPwd</servlet-name>
+    <url-pattern>/updataPwd</url-pattern>
+  </servlet-mapping>
+</web-app>
